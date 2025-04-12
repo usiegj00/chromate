@@ -37,6 +37,7 @@ module Chromate
           when 'ArrowRight' then 'ArrowRight'
           when 'ArrowUp' then 'ArrowUp'
           when 'ArrowDown' then 'ArrowDown'
+          when '.' then 'Period'
           else
             "Key#{key.upcase}"
           end
@@ -55,6 +56,7 @@ module Chromate
           when 'ArrowRight' then 0x27
           when 'ArrowUp' then 0x26
           when 'ArrowDown' then 0x28
+          when '.' then 0xBE # Period key code (190 decimal)
           else
             key.upcase.ord
           end
