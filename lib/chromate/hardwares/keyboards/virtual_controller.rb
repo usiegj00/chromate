@@ -38,6 +38,29 @@ module Chromate
           when 'ArrowUp' then 'ArrowUp'
           when 'ArrowDown' then 'ArrowDown'
           when '.' then 'Period'
+          when ',' then 'Comma'
+          when '/' then 'Slash'
+          when ';' then 'Semicolon'
+          when "'" then 'Quote'
+          when '[' then 'BracketLeft'
+          when ']' then 'BracketRight'
+          when '\\' then 'Backslash'
+          when '-' then 'Minus'
+          when '=' then 'Equal'
+          when '`' then 'Backquote'
+          when ' ' then 'Space'
+          when 'Shift' then 'ShiftLeft'
+          when 'Control' then 'ControlLeft'
+          when 'Alt' then 'AltLeft'
+          when 'Meta' then 'MetaLeft'
+          when 'Home' then 'Home'
+          when 'End' then 'End'
+          when 'PageUp' then 'PageUp'
+          when 'PageDown' then 'PageDown'
+          when 'Insert' then 'Insert'
+          when 'CapsLock' then 'CapsLock'
+          when 'NumLock' then 'NumLock'
+          when 'ScrollLock' then 'ScrollLock'
           else
             "Key#{key.upcase}"
           end
@@ -47,16 +70,39 @@ module Chromate
         # @return [Integer]
         def key_to_virtual_code(key)
           case key
-          when 'Enter' then 0x0D
-          when 'Tab' then 0x09
-          when 'Backspace' then 0x08
-          when 'Delete' then 0x2E
-          when 'Escape' then 0x1B
-          when 'ArrowLeft' then 0x25
-          when 'ArrowRight' then 0x27
-          when 'ArrowUp' then 0x26
-          when 'ArrowDown' then 0x28
-          when '.' then 0xBE # Period key code (190 decimal)
+          when 'Enter' then 0x0D  # 13
+          when 'Tab' then 0x09    # 9
+          when 'Backspace' then 0x08  # 8
+          when 'Delete' then 0x2E  # 46
+          when 'Escape' then 0x1B  # 27
+          when 'ArrowLeft' then 0x25  # 37
+          when 'ArrowRight' then 0x27  # 39
+          when 'ArrowUp' then 0x26  # 38
+          when 'ArrowDown' then 0x28  # 40
+          when '.' then 0xBE  # 190
+          when ',' then 0xBC  # 188
+          when '/' then 0xBF  # 191
+          when ';' then 0xBA  # 186
+          when "'" then 0xDE  # 222
+          when '[' then 0xDB  # 219
+          when ']' then 0xDD  # 221
+          when '\\' then 0xDC  # 220
+          when '-' then 0xBD  # 189
+          when '=' then 0xBB  # 187
+          when '`' then 0xC0  # 192
+          when ' ' then 0x20  # 32
+          when 'Shift' then 0x10  # 16
+          when 'Control' then 0x11  # 17
+          when 'Alt' then 0x12  # 18
+          when 'Meta' then 0x5B  # 91
+          when 'Home' then 0x24  # 36
+          when 'End' then 0x23  # 35
+          when 'PageUp' then 0x21  # 33
+          when 'PageDown' then 0x22  # 34
+          when 'Insert' then 0x2D  # 45
+          when 'CapsLock' then 0x14  # 20
+          when 'NumLock' then 0x90  # 144
+          when 'ScrollLock' then 0x91  # 145
           else
             key.upcase.ord
           end
